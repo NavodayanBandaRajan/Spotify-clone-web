@@ -1,0 +1,802 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <title> Spotify Web</title>
+    
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      
+      body{
+        background-color:  #000000;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      
+      .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+
+        margin: 3px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border: solid 1px white;
+        border-radius: 14px;
+        width: 100vw;
+        height: 8vh;
+        overflow-x: hidden;
+        position: fixed;
+      }
+      
+      .icon{
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      
+      }
+      
+.spotify-logo{
+  width:34px;
+  height:33px;
+  background:#1DB954;
+  border-radius:50%;
+  position:relative;
+   margin-left: 9px;
+  margin-right: 6px;
+}
+
+.arc{
+  position:absolute;
+  border-top:5px solid black;
+  border-radius:50%;
+}
+
+.arc1{
+  width: 28px;
+  height:21px;
+  top:5px;
+  left:3px;
+}
+
+.arc2{
+  width:18px;
+  height:13px;
+  top: 13px;
+  left:8px;
+}
+
+.arc3{
+  width: 13px;
+  height: 13px;
+  top: 21px;
+  left: 11px;
+}
+    
+      
+      .spotify{
+        color:  #1DB954;
+        text-align: center;
+        font-family: roboto;
+        font-weight: bolder;
+        font-size: 23px;
+      }
+      
+      .actors{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        gap: 17px;
+      }
+      
+      .button{
+        border: none;
+      }
+      
+      .button button{
+        background-color:#1DB954;
+        width: 33vw;
+        height: 6vh;
+        border-radius: 15px;
+        color: black;
+        font-size: 22px;
+        font-family: roboto;
+        text-align: center;
+        border: none;
+      }
+      
+      .hamburger{
+  width:23px;
+  cursor:pointer;
+  margin-right: 11px;
+}
+
+.hamburger span{
+  display:block;
+  height:2px;
+  background:white;
+  margin:6px 0;
+  border-radius:2px;
+}
+
+.menu{
+  position:fixed;
+  top:70px;
+  right:-250px;
+  width:200px;
+  background:#121212;
+  border:1px solid #333;
+  border-radius:10px;
+  transition:0.4s;
+  padding:15px;
+}
+
+.menu a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:12px;
+  font-size: 18px;
+}
+
+.menu a:hover{
+  color:#1DB954;
+}
+
+.menu.show{
+  right:10px;
+}
+
+      
+      .trending-songs-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 83px;
+        
+}      
+      
+      
+      
+      .popular-artists-container,
+      .popular-albums-and-singles-container,
+      .popular-radio-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 83px;
+        
+      }
+      
+      .image{
+  width:100%;
+  overflow:hidden;
+}
+      
+      .trending-songs img,
+.popular-artists img,
+.popular-albums-and-singles img,
+.popular-radio img{
+  align-content: center;
+  text-align: center;
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px 10px 0 0;
+}
+ 
+  
+      
+      .trending-songs,
+.popular-artists,
+.popular-albums-and-singles,
+.popular-radio{
+  width:150px;
+  height:220px;
+  margin:14px;
+  border:1px solid #333;
+  border-radius:10px;
+}
+    .popular-artists h4{
+      text-align: center;
+      margin: 13%;
+    }
+   
+   .popular-albums-and-singles h4,
+   .popular-radio h4{
+      text-align: center;
+      margin: 13%;
+    }
+    
+      h4,
+      p{
+         color: whitesmoke;
+         padding: 5px;
+         margin: auto;
+      }
+      
+      h2{
+        margin-top: 58px;
+        color: whitesmoke;
+         padding: 0px;
+         text-align: center;
+         margin-bottom: 0;
+      }
+      
+      .navlast{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        background: transparent;
+        backdrop-filter: blur(16px);
+        background-color: black;
+        margin: 3px;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        border: solid 1px white;
+        border-radius: 14px;
+        width: 100vw;
+        height: 8vh;
+        overflow-x: hidden;
+        position: fixed;
+      }
+      
+      .navlast-icons{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding:0 15px;
+}
+    
+    .navlast-icons{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  color:whitesmoke;
+  cursor:pointer;
+  gap: 55px;
+}
+
+.navlast-icons i{
+  font-size:22px;
+  margin-bottom:4px;
+}
+
+.navlast-icons a{
+  text-decoration:none;
+  color:white;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  
+}
+
+.navlast-icons a:hover{
+  color:#1DB954;
+}
+
+.navlast-icons span{
+  font-size:12px;
+}
+
+.navlast-icons i:hover{
+  color:#1DB954;
+}
+      
+     .musicnav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        background: transparent;
+        backdrop-filter: blur(16px);
+        background-color: black;
+        margin: 3px;
+        bottom: 9vh;
+        left: 0;
+        z-index: 1;
+        border: solid 1px white;
+        border-radius: 14px;
+        width: 100vw;
+        height: 14vh;
+        overflow-x: hidden;
+        position: fixed;
+      } 
+      
+     .intro{
+       display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     
+     
+     .introimage{
+  width:100%;
+  overflow:hidden;
+  border-radius: 19px;
+}
+      
+      .introimage img{
+  align-content: center;
+  text-align: center;
+  width: 15vw;
+  height: 10vh;
+  object-fit:cover;
+  border-radius:10px 10px 0 0;
+  margin-left: 10px;
+  
+}
+    
+     .controls{
+       margin: auto;
+       padding: 0;
+     }
+     
+     .controls input{
+       margin-top: 11px;
+       margin-right: 5px;
+     }
+     
+     .buttons{
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: space-evenly;
+       align-items: center;
+       gap: 13px;
+     }
+     
+     .popular-radio-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 90px;
+    
+    </style>
+    
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="icon">
+      <div class="spotify-logo">
+  <div class="arc arc1"></div>
+  <div class="arc arc2"></div>
+  <div class="arc arc3"></div>
+   </div>
+      <div class="spotify">
+        <h4>Spotify</h4>
+      </div>
+     </div>
+     
+     <div class="actors">
+     <div class="button">
+       <button type="button">
+         Open app
+       </button>
+     </div>
+     
+     
+     <div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="menu" id="menu">
+  <a href="#">Log in</a>
+  <a href="#">Sign in</a>
+  <a href="#">Home</a>
+  <a href="#">Search</a>
+  <a href="#">Library</a>
+  <a href="#">Premium</a>
+  <a href="#">Log out</a>
+</div>
+     
+     </div>
+    </div>
+    
+    <div class="section" id="home">
+      <h2>Trending Songs</h2>
+      <div class="trending-songs-container">
+        
+         
+         <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRUyvVDWrziSNI8jFyjTDKZ8w4ixub9duURSamXtKsk8TnBKcMVNHN_MdA-8fat">
+          </div>
+           <h4>Song: Kesariya</h4>
+           <p>Artist: Arijit Singh</p>
+        </div>
+        
+        <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+          <div class="image">
+           <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS9ZSnQb7RFWdOiOxUonEcRgk15Mh3wzDkl6DFMQn-e68coUBwYPvX9F3lXqD1m"> 
+          </div>
+          <h4>Song:Tum hi ho </h4>
+           <p>Artist: Arijit Singh</p>
+        </div>
+        
+      
+        <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+           <div class="image">
+           <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-pHM8QVe4td6Cmt2X13wQWzCl945iqnF4WbvPH5fFVOXicmXEkUV7AUJel5Hb"> 
+          </div>
+          <h4>Song: Apna Banale</h4>
+           <p>Artist: Arijit Singh</p>
+        </div>
+        
+      
+        <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+         <div class="image">
+           <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRUct3CbqUdZGnS0oSAe4aUmrhj1pEcEI3R_hknGjOdf9K7y5j5LQQfPaCBdZrt"> 
+          </div>
+          <h4>Song: Jeena Jeena</h4>
+          <p>Artist: Atif Aslam</p>
+        </div>
+        
+      
+       <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+          <div class="image">
+           <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQLrr4qka5CnhX35ZDoPSj1T6YJe8bLJCprRj31uUoUQgnHUUMkNf-ADR3HrePI"> 
+          </div>
+          
+          <h4>Song: Dil Diyan Gallan</h4>
+    <p>Artist: Atif Aslam</p>
+        </div>
+        
+    
+        <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+          <div class="image">
+       <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS6-XcgUoNJ61XPZiMBj60pfL6CBzrf4YFH30Uos6id6oD71OySJgzymFm79-Es"> 
+          </div>
+          <h4>Song: Mile Ho Tum Humko</h4>
+     <p>Artist: Neha kakkar</p>
+        </div>
+        
+      
+        <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+          <div class="image">
+           <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQc_lDO3x8BSoTtmb_XAWynw_nELbJHxxGHIrKe8pGN-7hGss6KTzZGqWgYqcVg"> 
+          </div>
+          <h4>Song: Mera Dil Bhi <br>
+          Kitna Pgal Hai</h4>
+          <p>Artist: Kumar Sanu</p>
+        </div>
+        
+      
+       <div class="trending-songs"
+onclick="window.location.href='notworking.html'">
+          <div class="image">
+           <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR9bRMp87xSB4n4L2j-mwFX7jI55lXUUii6yJXrmxgJnxO_PTIVSrGyAluDOWXp"> 
+          </div>
+           <h4>Song: Arz Kiya Hai</h4>
+          <p>Artist: Anuv Jain</p>
+        </div>
+      </div>
+      
+      <h2>Popular Artist</h2>
+      <div class="popular-artists-container">
+        
+      
+        <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcT3auFbjMIXpN0EFd1Kv3jmqq0GpSCz5q51OLaUjkk8gJE3iBux9KhjF8&s=10">
+          </div>
+          <h4> Arijit Singh</h4>
+        </div>
+       
+    
+        <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2HwnjgHh4seqBw2FiPyegDqDJ0SkCPD3uUsaCGJhBz5OwxNnB6i7fSCZ2&s=10">
+          </div>
+          <h4> Atif Aslam</h4>
+        </div>
+        
+      
+        <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiNZNClgACBKR0QYPeSq5HLKyvvsodWBZvqbIRMxzPuTeFjhIbDkU5TCc&s=10">
+          </div>
+          <h4> Anuv Jain</h4>
+        </div>
+       
+      
+       <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS59azydLN-EYAGRm0kmHIb69QH2ZqM7ADU8rDI_SP3qpNI2p-75C1X5AI5&s=10">
+          </div>
+          <h4> Siddhu Moosewala</h4>
+        </div>
+      
+      
+      <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ_HbjqsBpfZOJ58P5B3PKnlIZ9XzhgHt6bAUiKaed_DluwE4wtrKpF74&s=10">
+          </div>
+          <h4> Neha Kakkar</h4>
+        </div>
+       
+      
+      <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVnxs2SVA6kxuIN8-7tR5aYfz0kk1iXlaTwKGkKkXWgQt1JJGW6w8qW3t&s=10">
+          </div>
+          <h4> Sachet Tandan</h4>
+        </div>
+        
+        
+        <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5CrLEh4EJiBcxo_yZjNs4veFfDgEEbwVNfP433ppMSYrbaFkus1yr6m8g&s=10">
+          </div>
+          <h4> Parampara</h4>
+        </div>
+       
+    
+      <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXttkpv216BRwQKr7Th0McSaJG41BEZ-80EIf8mmbEg5-5ROaui4niwAp&s=10">
+          </div>
+          <h4> A.R Rahman</h4>
+        </div>
+        
+   <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ3uTwv1ASOaz2Zj6fO2eTow1kwqLetgb3bgkHh6HlVZruush-BqM969AlKE-b4">
+          </div>
+          <h4> Sukriti Kakkar</h4>
+        </div>
+        
+      <div class="popular-artists" onclick="window.location.href='notworking.html'">
+         <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxJPFfp2AQDvYvkGk5k7Ge_h-lPp6w9uBcif6V0Y2Rv_t3Ko4eu4Xm7sE&s=10">
+          </div>
+          <h4> Ranveer Singh</h4>
+        </div>
+        
+    <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDv-j3fDQ2p-ujnbVphQhXFWeyJkLg1X0VzDpthWr1hxBgVNykShpFaT07&s=10">
+          </div>
+          <h4> Priya Saraiya</h4>
+        </div>
+       
+    
+        <div class="popular-artists" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTleuPuWxyo_Vv3RNPKl9Igk_gOtKxa6nBM9K1K1fjR3Jb6Z8nLtCeOuM4&s=10">
+          </div>
+          <h4> Shreya Goshal</h4>
+        </div>
+        
+      </div>
+      
+      <h2>Popular Albums And Singles</h2>
+    <div class="popular-albums-and-singles-container">
+        
+    
+        <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu-1GH8F-dA9wRw787HMjkb26-nt1nrv_hpgzO3QZXri1FAA6yWuSmRpy7V1wH">
+          </div>
+          <h4> Ashiqui2</h4>
+        </div>
+       
+       
+        <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQcQM0wsDTlgcC_S8wta0b70GeNTzv5ERdgn6LL-QtUN1_jSov7LobuBZEY1XXh">
+          </div>
+          <h4> Tere liye</h4>
+        </div>
+        
+        
+       <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTgwo6Gt1rWEJkdrUCdx56OWCic1MnmlIikI5VEiRJ3YKhDcZc5xBm96sBQjxaL">
+          </div>
+          <h4> Sanam Teri Kasam</h4>
+        </div>
+       
+      
+       <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTVp1ar0R5IfIhWArjfwU_uO-3-yYEGA5AtQb253smr8K4AtPx62nu03XduIdZX">
+          </div>
+          <h4> Finding Her</h4>
+        </div>
+      
+    
+        <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRpmeZecplzvA5n12QSWIO46XcfdDo5M6vakGrMTrfk_LJhoEsIWqPHrAkY_GsG">
+          </div>
+          <h4> Ranjahan</h4>
+        </div>
+       
+    
+        <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeVDaxWmI3D5NkTzacFpcqxqe_cROpsFGBnm4cRbdGgzTvGExkcZr91IB7mdMu">
+          </div>
+          <h4> Adi Adi Raat</h4>
+        </div>
+        
+      
+        <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTGh6dtf4MWWpEFKk6VgYjTox7aWareDVJnLOid3TcjSCcDKGxpEGKk9qKE4CM2">
+          </div>
+          <h4> Love Me Like You Do</h4>
+        </div>
+       
+       
+        <div class="popular-albums-and-singles" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcROHFQwc2uLlPh2Kq635bTMTxZWSjTMmEAhzbiqyo0ee4bAJ9MJ44TQE_WegRB7">
+          </div>
+          <h4> Bapu tere karke</h4>
+        </div>  
+      
+      <h2>Popular Radios</h2>
+       <div class="popular-radio-container">
+        
+      
+     <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="https://www.google.com/search?client=ms-android-motorola&hs=qKh&sca_esv=5dfb2d7dc69f012c&sxsrf=ANbL-n72TLtLAiJGv0ITXCpyMnstZY3mFg:1780810266507&udm=2&fbs=ADc_l-byipRaccqV0jmfPhi1DgzPtklXGmVkws8Z_lBff884vz53a9A_QDRBKlYe3CNNcsayFE9Suy8U9omhvAx55Zwv7mAjKFxu3T3Pf4uTRIQpu-qe0c3p9v-6y8M4B2GU1e2v5PZQdHfG_r_OyYEJjh2Vt1leIj21Xvw5t1_d4KiQyu97MVZmPhBZZQ-wBkhnIIuTsW-O62vjZKp9SE9s5uiQjYPNQSxhuwwp17ACkOQGNIlJgDw&q=aesthetic+singers+radio+image+popular+Arijit+Singh+Radio%0AAtif+Aslam+Radio%0AAnuv+Jain+Radio%0ANeha+Kakkar+Radio%0AShreya+Ghoshal+Radio%0AA.R.+Rahman+Radio%0AKK+Radio%0AKumar+Sanu+Radio&sa=X&ved=2ahUKEwjvs-Oas_SUAxXExjgGHeCcG78QtKgLegQIExAB&biw=360&bih=560&dpr=2#sv=CAMSVxoyKhBlLTJ5c2ZxMUdHTEpHNGxNMg4yeXNmcTFHR0xKRzRsTToOM19jQVVKby1WM0lUNk0gBCoXCgFzEhBlLTJ5c2ZxMUdHTEpHNGxNGAEwAUoECAEQAhgHINH1rucDSggQAhgBIAIoAQ">
+          </div>
+          <h4> Arijit Singh Radio </h4>
+        </div>
+       
+    
+        <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="#">
+          </div>
+          <h4> K.K. Radio</h4>
+        </div>
+        
+      
+        <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="#">
+          </div>
+          <h4> Shreya Goshal Radio </h4>
+        </div>
+       
+
+        <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="#">
+          </div>
+          <h4> Alka Yagnik Radio </h4>
+        </div>
+      
+  
+        <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="#">
+          </div>
+          <h4> Diljit Dosanjh Radio </h4>
+        </div>
+       
+  
+        <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="#">
+          </div>
+          <h4> A.R. Rahaman Radio </h4>
+        </div>
+        
+        
+        <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="#">
+          </div>
+          <h4>Yo Yo Honey Singh Radio </h4>
+        </div>
+       
+    
+        <div class="popular-radio" onclick="window.location.href='notworking.html'">
+          <div class="image">
+            <img src="#">
+          </div>
+          <h4> Siddhu Moosewala Radio </h4>
+        </div>  
+      
+    </div>
+    
+    <div class="musicnav">
+      
+      <div class="intro">
+        <div class="introimage">
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-pHM8QVe4td6Cmt2X13wQWzCl945iqnF4WbvPH5fFVOXicmXEkUV7AUJel5Hb">
+        </div>
+        <div class="songName">
+          <p>Apna Bana Le, Arijit Singh</p>
+        </div>
+       </div> 
+       <br>
+        <div class="controls">
+          <input type="range">
+          <br>
+    <div class="buttons">
+   <button>⏮</button>
+   <button>▶️</button>
+   <button>⏭</button>
+   </div>
+        </div>
+
+    </div>
+    
+    <div class="navlast">
+      <div class="navlast-icons">
+      <div class="home">
+        <a href="#home">
+        <i class="fa-solid fa-house"></i>
+        </a>
+    <span>Home</span>
+      </div>
+      
+      <div class="search">
+        <a href="search.html">
+         <i class="fa-solid fa-magnifying-glass">
+           
+         </i>
+         </a>
+    <span>Search</span>
+      </div>
+      
+      <div class="library">
+        <a href="library.html">
+        <i class="fa-solid fa-book"></i>
+        </a>
+    <span>Library</span>
+      </div>
+      
+     <div class="premium">
+       <a href="premium.html">
+       <i class="fa-solid fa-crown"></i>
+       </a>
+    <span>Premium</span>
+     </div>
+     </div>
+    </div>
+    
+    <script>
+function toggleMenu(){
+  document.getElementById("menu")
+          .classList.toggle("show");
+}
+</script>
+    
+  </body>
+</html>
