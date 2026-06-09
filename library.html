@@ -1,0 +1,820 @@
+<html>
+  <head>
+    
+    <!-- UTF code -->
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <!--fontawese-->
+    
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+         box-sizing: border-box;
+      }
+      body{
+        background-color: #000000;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+      }
+     
+      .header{
+        border: #121212;
+        border-radius: 14px;
+        margin: 8px;
+        overflow: hidden;
+      }
+      
+      .headerBox{
+      margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .header-content{
+      text-align: left;
+      color: white;
+      font-weight: bolder;
+      font-family: roboto;
+      }
+      
+      .boxes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        color: white;
+      }
+      
+      .search-box{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.search-box i{
+  font-size:22px;
+  color:white;
+}
+     .addbox i{
+       font-size:22px;
+        color:white;
+     }
+     
+     #icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: #000000;
+       text-align: center;
+       font-weight: bolder;
+       font-family: roboto;
+       color: white;
+      margin-right: 7px;
+       transition: all 0.4s ease;
+}
+
+
+     
+     .buttons-container{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       background: transparent;
+       gap: 5px;
+       margin: 17px;
+     }
+     
+     .button{
+       background: transparent;
+       text-align: center;
+      
+     }
+     
+     button{
+       background-color: #121212;
+       text-align: center;
+       border: solid 1px whitesmoke;
+       border-radius: 17px;
+       font-weight: bolder;
+       font-family: roboto;
+       height: 6vh;
+       width: 19vw;
+       color: white;
+       transition: all 0.4s ease;
+     }
+     
+     button:hover{
+       transform: translateY(4px);
+       background-color: #1DB954;
+     }
+     
+     
+     
+     #icon i:hover{
+       transform: translateY(4px);
+       background-color: #C71585;
+     }
+     
+     .song{
+  display:flex;
+  align-items:center;
+  gap: 23px;
+
+  width:93%;
+  min-height:80px;
+
+  padding:10px;
+  color:white;
+
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.song:hover{
+  background:#1a1a1a;
+}
+
+.image img{
+  width:60px;
+  height:60px;
+  border-radius:8px;
+  object-fit:cover;
+}
+
+.songName{
+  text-align:left;
+}
+
+.songName h4{
+  margin:0;
+  font-size:16px;
+}
+
+.songName p{
+  margin-top:4px;
+  color:#b3b3b3;
+  font-size:13px;
+}
+
+.menu a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:12px;
+  font-size: 18px;
+}
+
+.menu a:hover{
+  color:#1DB954;
+}
+
+.song{
+  position: relative;
+}
+
+.menu{
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 180px;
+  background: #121212;
+  border: 1px solid #333;
+  border-radius: 10px;
+  display: none;
+  z-index: 999;
+  margin: auto;
+}
+
+.menu.show{
+  display: block;
+}
+
+     .image{
+      width:60px;
+  height:60px;
+
+  padding:10px;
+  color:white;
+  background-color: #121212;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.image:hover{
+  background:#1a1a1a;
+}
+     
+     .image i{
+       font-size:22px;
+  color:white;
+  width:auto;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: auto;
+  margin-top: 19px;
+     }
+     
+     .artist{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 94vw;
+  min-height: 80px;
+
+  padding: 10px;
+  color: white;
+
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.artist:hover{
+  background: #1a1a1a;
+}
+
+.artists{
+  width: 80px;
+  height: 80px;
+
+  background: #121212;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.artists i{
+  font-size: 22px;
+  color: white;
+}
+
+#add-podcasts .image{
+  background-color: #8A2BE2;
+}
+
+#add-podcasts .image:hover{
+  background-color: #9B59B6;
+}
+
+#add-events .image{
+  background-color: #FF8C00;
+}
+
+#add-events .image:hover{
+  background-color: #FFA726;
+}
+
+#import .image{
+  background-color: #1DB954;
+}
+
+#import i{
+    margin-top: 19px;
+}
+
+#import .image:hover{
+  background-color: #1ED760;
+}
+
+.songIcon{
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  overflow: hidden;
+}   
+    .songIcon i{
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+    }
+    
+
+#import .image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#import .image i{
+  margin: 0;
+}
+
+
+
+.musicnav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #9B59;
+        backdrop-filter: blur(16px);
+        color: #000000;
+        margin: 3px;
+        bottom:10vh;
+        left: 0;
+        z-index: 1;
+        border: solid 1px white;
+        border-radius: 14px;
+        width: 100vw;
+        height: 14vh;
+        overflow-x: hidden;
+        position: fixed;
+      } 
+      
+     .intro{
+       display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     
+     
+     .introimage{
+  width:100%;
+  overflow:hidden;
+  border-radius: 19px;
+}
+      
+      .introimage img{
+  align-content: center;
+  text-align: center;
+ width:60px;
+ height:60px;
+  object-fit:cover;
+  border-radius:10px 10px 0 0;
+  margin-left: 10px;
+  
+}
+    
+     .controls{
+       margin: auto;
+       padding: 0;
+     }
+     
+     .controls input{
+       margin-top: 11px;
+       margin-right: 5px;
+     }
+     
+      .navlast{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        background: transparent;
+        backdrop-filter: blur(16px);
+        background-color: black;
+        margin: 3px;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        border: solid 1px white;
+        border-radius: 14px;
+        width: 100vw;
+        height: 8vh;
+        overflow-x: hidden;
+        position: fixed;
+      }
+      
+      .navlast-icons{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding:0 15px;
+}
+    
+    .navlast-icons{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  color:whitesmoke;
+  cursor:pointer;
+  gap: 55px;
+}
+
+.navlast-icons i{
+  font-size:22px;
+  margin-bottom:4px;
+}
+
+.navlast-icons a{
+  text-decoration:none;
+  color:white;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  
+}
+
+.navlast-icons a:hover{
+  color:#1DB954;
+}
+
+.navlast-icons span{
+  font-size:12px;
+}
+
+.navlast-icons i:hover{
+  color:#1DB954;
+}
+ 
+    .library-page{
+ padding-bottom:180px;
+}
+
+.controls button{
+ width:45px;
+ height:45px;
+ border-radius:50%;
+}
+
+.songContainer{
+  padding-bottom: 29vh;
+}
+    </style>
+  </head>
+  
+  <body>
+    <div class="header">
+    
+    <div class="headerBox">
+      <!--your library__-->
+      
+      <div class="header-content">
+       <h2>Your library</h2> 
+      </div>
+      
+      <!--icons-->
+      
+      <div class="boxes">
+        <div class="search-box">
+   <i class="fa-solid fa-magnifying-glass" onclick="window.location.href='notworking.html'"></i>
+        </div>
+        <div class="addbox">
+          <i class="fa-solid fa-plus fa-lg" onclick="window.location.href='notworking.html'"></i>
+        </div>
+      </div>
+    </div>
+    
+<!-- buttons -->
+    <div class="buttons-container">
+      <div class="button" id="icon">
+    <i class="fa-solid fa-plus fa-lg" onclick="window.location.href='notworking.html'"></i>
+        </div>
+       
+       <div class="button"> 
+        <button type="button" onclick="window.location.href='library.html'"><p>Playlists</p></button>
+        </div>
+        
+        <div class="button">
+        <button type="button" onclick="window.location.href='notworking.html'"><p>Podcasts</p></button>
+        </div>
+        
+        <div class="button">
+        <button type="button" onclick="window.location.href='notworking.html'"><p>Albums</p></button>
+        </div>
+        
+       <div class="button">
+        <button type="button" onclick="window.location.href='notworking.html'"><p>Artists</p></button>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+    
+    
+    <!--song list-->
+    
+    <div class="songContainer">
+      
+      <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="#">
+          </div>
+          <div class="songName">
+            <h4>Liked Songs</h4>
+          </div>
+      <div class="songIcon"
+      onclick="toggleMenu(event)">
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+       
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+            <h4>Sad Playlists</h4>
+          </div>
+          <div class="songIcon" onclick="toggleMenu(event)">
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+    <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+        
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+          <h4>Atif Aslam</h4>
+             <p>Playlist • 132 songs</p> 
+             </div>
+       <div class="songIcon">
+        <i class="fa-solid fa-ellipsis" onclick="toggleMenu(event)"></i>
+        </div>
+        <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+        
+     <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+          <h4>Hindi Hits</h4>
+             <p>Playlist • 127 songs</p>
+            </div>
+      <div class="songIcon" onclick="toggleMenu(event)">
+        <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+        
+       
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+           <h4>Arijit Singh</h4>
+             <p>Playlist • 127 songs</p>
+           </div>
+        <div class="songIcon" onclick="toggleMenu(event)">
+        <i class="fa-solid fa-ellipsis"></i>
+        </div>
+     <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+        
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+        <h4>Chill mix</h4>
+             <p>Playlist • 127 songs</p>
+          </div>
+        <div class="songIcon" onclick="toggleMenu(event)">
+     <i class="fa-solid fa-ellipsis"></i>
+        </div>
+  <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+       
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+      <h4>Workout Songs</h4>
+             <p>Playlist • 121 songs</p>
+          </div>
+     <div class="songIcon" onclick="toggleMenu(event)">
+     <i class="fa-solid fa-ellipsis"></i>
+        </div>
+     <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+        
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+          <h4>Bhojpuri Hits</h4>
+          <p>Playlist • 121 songs</p>
+          </div>
+          <div class="songIcon" onclick="toggleMenu(evevt)">
+     <i class="fa-solid fa-ellipsis"></i>
+        </div>
+     <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+       
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+          <h4>Trending 2026</h4>
+             <p>Playlist • 125 songs</p>
+          </div>
+   <div class="songIcon" onclick="toggleMenu(event)">
+     <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+        
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+            <h4>Punjabi Beats</h4>
+             <p>Playlist • 120 songs</p>
+          </div>
+         <div class="songIcon" onclick="toggleMenu(event)">
+     <i class="fa-solid fa-ellipsis"></i>
+        </div>
+  <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+       
+        <div class="song" onclick="window.location.href='notworking.html'">
+        <div class="image">
+          <img src="">
+          </div>
+          <div class="songName">
+            <h4>Lo-fi Study</h4>
+             <p>Playlist • 120 songs</p>
+          </div>
+           <div class="songIcon" onclick="toggleMenu(event)">
+     <i class="fa-solid fa-ellipsis"></i>
+        </div>
+  <div class="menu" id="menu">
+  <a href="#">search</a>
+  <a href="#">like</a>
+  <a href="#">save</a>
+  <a href="#">add</a>
+</div>
+        </div>
+       
+    <div class="artist" onclick="window.location.href='notworking.html'">
+    
+    <div class="artists">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+
+    <div class="songName">
+        <h4>Add artists</h4>
+    </div>
+
+</div>
+        
+        <div class="song" onclick="window.location.href='notworking.html'" id="add-events">
+        <div class="image">
+      <i class="fa-solid fa-plus fa-lg"></i>
+          </div>
+          <div class="songName">
+       <h4>Add Podcasts</h4>
+          </div>
+        </div>
+       
+        <div class="song" onclick="window.location.href='notworking.html'" id="add-podcasts">
+        <div class="image">
+        <i class="fa-solid fa-plus fa-lg"></i>
+          </div>
+          <div class="songName">
+    <h4>Add events and venues</h4>
+          </div>
+        </div>
+        
+        <div class="song" onclick="window.location.href='notworking.html'" id="import">
+        <div class="image">
+       <i class="fa-solid fa-folder-open"></i>
+          </div>
+          <div class="songName">
+       <h4>Import Your Music</h4>
+          </div>
+        </div>
+         </div>
+         
+        <div class="musicnav">
+      
+      <div class="intro">
+        <div class="introimage">
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-pHM8QVe4td6Cmt2X13wQWzCl945iqnF4WbvPH5fFVOXicmXEkUV7AUJel5Hb">
+        </div>
+        <div class="songName">
+          <p>Apna Bana Le, Arijit Singh</p>
+        </div>
+       </div> 
+       <br>
+        <div class="controls">
+          <input type="range">
+          <br>
+    <div class="buttons">
+   <button>⏮</button>
+   <button>▶️</button>
+   <button>⏭</button>
+   </div>
+        </div>
+        </div>
+        
+        <div class="navlast">
+      <div class="navlast-icons">
+      <div class="home">
+        <a href="home.html">
+        <i class="fa-solid fa-house"></i>
+        </a>
+    <span>Home</span>
+      </div>
+      
+      <div class="search">
+        <a href="search.html">
+         <i class="fa-solid fa-magnifying-glass">
+           
+         </i>
+         </a>
+    <span>Search</span>
+      </div>
+      
+      <div class="library">
+        <a href="library.html">
+        <i class="fa-solid fa-book"></i>
+        </a>
+    <span>Library</span>
+      </div>
+      
+     <div class="premium">
+       <a href="premium.html">
+       <i class="fa-solid fa-crown"></i>
+       </a>
+    <span>Premium</span>
+     </div>
+     </div>
+        </div>
+   
+   
+  <script>
+function toggleMenu(event){
+  event.stopPropagation(); // song ke onclick ko rokega
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+    
+  </body>
+</html>
