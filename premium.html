@@ -1,0 +1,1109 @@
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--fontawesome link-->
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+   *{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+      
+      body{
+        background-color:  #000000;
+        overflow-x: hidden;
+      }
+      
+      .premium{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .premium-header{
+        margin: 9px;
+  display:flex;
+  justify-content: cneter;
+  align-items:center;
+  gap:10px;
+}
+
+.premium-header i{
+  color:#FFD700;
+  font-size:40px;
+  text-shadow:0 0 10px #FFD700;
+}
+
+.premium-header h3{
+  color:white;
+}
+
+
+
+.settingIcon i{
+  color: darkblue;
+  font-size: 27px;
+  text-shadow:0 0 10px darkblue;
+  margin-right: 17px;
+}
+
+.headerP{
+  color:white;
+}
+
+.header{
+         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 19px;
+        background-color: #121212;
+        min-height: 44vh;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 13px;
+}
+
+.textH1{
+  color: white;
+  font-weight: bolder;
+  margin: 9px;
+  margin-top: 2px;
+}
+
+.textH2{
+  color: gold;
+  font-weight: bolder;
+  margin: 9px;
+  margin-top: 13px;
+  text-shadow:0 0 13px #FFD700;
+}
+
+.firstMonthFree button{
+  margin: 8px;
+   width: 21vh;
+   height: 6vh;
+   border-radius: 7%;
+   background:#000000;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   color: gold;
+   border: solid 1px gold;
+}
+.GetPremium{
+ margin-left: 8px; 
+
+}
+
+.GetPremium button{
+  margin-top:17px;
+  font-size: 17px;
+  margin-right: 11px;
+   width: 40vh;
+   height: 8vh;
+   border-radius: 8px;
+   background: #1DB954;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   color: white;
+   border: solid 1px  #1DB954;
+   font-weight: bolder;
+}
+.premium-logo{
+   width:90px;
+   height:90px;
+   border-radius:50%;
+   background:#FFD700;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+
+.premium-logo i{
+   font-size:60px;
+   color:black;
+}
+
+.premiumBenifits-conrainer{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:15px;
+  padding:15px;
+  margin-bottom: 8vh;
+}
+
+.premiumBenifits-card{
+  background:#121212;
+  border-radius:15px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  min-height:140px;
+}
+
+.fontIcon{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#1DB95420;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.fontIcon i{
+  font-size:28px;
+  color:#1DB954;
+}
+
+.premiumBenifits-text{
+  margin:0;
+}
+
+.premiumBenifits-text p{
+  font-size:15px;
+  color:white;
+  margin:0;
+}
+
+.premiumBenifits-conrainer h3{
+  color:white;
+  grid-column:1/-1;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+
+
+.chooseYourPlan-conrainer{
+  padding:15px;
+  margin-bottom: 28vh;
+  display:grid;
+   grid-template-columns:repeat(2,1fr);
+   gap:15px;
+}
+
+
+
+.chooseYourPlan-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:#121212;
+  border-radius:15px;
+  padding:20px;
+  text-align:center;
+  min-height:220px;
+  width:100%;
+margin: auto;
+}
+
+#green{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#1DB95420;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+#blue{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#1DB1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+#purple{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background-color: rgba(138, 43, 226, 0.15);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+#green i{
+  font-size:28px;
+  color:#1DB954;
+}
+
+#blue i{
+  font-size:28px;
+  color: #1BD;
+}
+
+#purple i{
+  font-size:28px;
+  color: #8A2BE2;
+}
+
+
+
+.chooseYourPlan-text #payment{
+  font-size:15px;
+  color:white;
+  margin:0;
+}
+
+.chooseYourPlan-conrainer h3{
+  color:white;
+  grid-column:1/-1;
+  text-align:center;
+  margin-bottom:10px;
+  width: 65vw;
+}
+
+.chooseYourPlan-text h3{
+  margin:0;
+  width:auto;
+}
+
+#greenText,
+#blueText,
+#purpleText{
+  width:auto;
+}
+
+.chooseYourPlan-text p{
+  color:#b3b3b3;
+  margin-top:8px;
+  font-size:14px;
+}
+
+.chooseYourPlan-card button{
+  margin-top:15px;
+  background:#1DB954;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+#greenButton button{
+  background-color: #000000;
+  border: solid 1px #1BD429;
+}
+
+#blueButton button{
+  background-color: #000000;
+  border: solid 1px aqua;
+}
+
+#purpleButton button{
+  background-color: #000000;
+  border: solid 1px purple;
+}
+
+
+.whyPremium-conrainer{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  padding:15px;
+  margin-bottom: 18vh;
+}
+
+.whyPremium-card{
+  background:#121212;
+  border-radius:15px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  min-height:140px;
+}
+
+.whyIcon{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#1DB95420;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.whyIcon i{
+  font-size:28px;
+  color:#1DB954;
+}
+
+.whyPremium-text{
+  margin:0;
+}
+
+.whyPremium-text p{
+  font-size:15px;
+  color:white;
+  margin: auto;
+}
+
+.whyPremium-conrainer h3{
+   color:white;
+   grid-column:1/-1;
+   text-align:center;
+   margin-bottom:10px;
+}
+
+.whyPremium-text h4{
+  color:white;
+  text-align:center;
+}
+
+.frequentQuestions-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  margin-bottom: 17vh;
+}
+.frequent-card{
+    width:95%;
+    margin:auto;
+    background:#121212;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.faq-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    cursor:pointer;
+}
+
+.faq-header p{
+    color:white;
+    font-size:17px;
+    font-weight:600;
+}
+
+.faq-header i{
+    color:white;
+    transition:.3s;
+}
+
+.faq-answer{
+    color:#b3b3b3;
+    font-size:15px;
+    line-height:22px;
+    padding:0 18px;
+    max-height:0;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.frequent-card.active .faq-answer{
+    max-height:120px;
+    padding:0 18px 18px;
+}
+
+.frequent-card.active .fa-plus{
+    transform:rotate(45deg);
+}
+.frequent-card.active .faq-answer{
+max-height:200px;
+}
+
+.lastPremium{
+  background-color: #121212;
+  margin-bottom: 28vh;
+}
+
+.lastPpremium-heading h2{
+margin:20px auto;
+width:90%;
+line-height:35px;
+color: white;
+}
+
+.flexPremium{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.joinpremium p{
+  color: whitesmoke;
+  text-align: center;
+}
+
+#last-premium{
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#last-premium button{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width:140px;
+height:48px;
+  background-color: #1BD429;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 13px;
+  border: none;
+  border-radius: 17px;
+}
+
+.GetPremium button:hover{
+transform:scale(1.05);
+transition:.3s;
+}
+
+.chooseYourPlan-card button:hover{
+transform:scale(1.05);
+transition:.3s;
+}
+
+.navlast .premium i,
+.navlast .premium span{
+color:#1DB954;
+}
+
+.navlast{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        background: transparent;
+        backdrop-filter: blur(16px);
+        background-color: black;
+        margin: 3px;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        border: solid 1px white;
+        border-radius: 14px;
+        width: 100vw;
+        height: 8vh;
+        overflow-x: hidden;
+        position: fixed;
+      }
+      
+      .navlast-icons{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding:0 15px;
+}
+    
+    .navlast-icons{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  color:whitesmoke;
+  cursor:pointer;
+  gap: 55px;
+}
+
+.navlast-icons i{
+  font-size:22px;
+  margin-bottom:4px;
+}
+
+.navlast-icons a{
+  text-decoration:none;
+  color:white;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  
+}
+
+.navlast-icons a:hover{
+  color:#1DB954;
+}
+
+.navlast-icons span{
+  font-size:12px;
+}
+
+.navlast-icons i:hover{
+  color:#1DB954;
+}
+      
+     .musicnav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        background: transparent;
+        backdrop-filter: blur(16px);
+        background-color: black;
+        margin: 3px;
+        bottom: 9vh;
+        left: 0;
+        z-index: 1;
+        border: solid 1px white;
+        border-radius: 14px;
+        width: 100vw;
+        height: 14vh;
+        overflow-x: hidden;
+        position: fixed;
+      } 
+      
+     .intro{
+       display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     
+     
+     .introimage{
+  width:100%;
+  overflow:hidden;
+  border-radius: 19px;
+}
+      
+      .introimage img{
+  align-content: center;
+  text-align: center;
+  width: 15vw;
+  height: 10vh;
+  object-fit:cover;
+  border-radius:10px 10px 0 0;
+  margin-left: 10px;
+  
+}
+    .buttons{
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: space-evenly;
+       align-items: center;
+       gap: 13px;
+     }
+     .controls{
+       margin: auto;
+       padding: 0;
+     }
+     
+     .controls input{
+       margin-top: 11px;
+       margin-right: 5px;
+     }
+     
+     .songName p{
+       color: white;
+     }
+     
+     
+     /* ===========================
+   Laptop / Desktop Responsive
+=========================== */
+
+@media screen and (min-width: 992px){
+
+body{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* Header */
+.header{
+    padding:40px;
+    min-height:320px;
+}
+
+.text-box{
+    width:60%;
+}
+
+.premium-logo{
+    width:140px;
+    height:140px;
+}
+
+.premium-logo i{
+    font-size:80px;
+}
+
+/* Premium Benefits */
+.premiumBenifits-conrainer{
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* Plans */
+.chooseYourPlan-conrainer{
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.chooseYourPlan-card{
+    min-height:300px;
+}
+
+/* Why Premium */
+.whyPremium-conrainer{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* FAQ */
+.frequentQuestions-container{
+    width:80%;
+    margin:auto;
+    margin-bottom:150px;
+}
+
+.frequent-card{
+    width:100%;
+}
+
+/* Last Premium */
+.flexPremium{
+    justify-content:space-around;
+    align-items:center;
+    padding:30px;
+}
+
+.joinpremium{
+    width:60%;
+}
+
+#last-premium button{
+    width:200px;
+    height:60px;
+    font-size:18px;
+}
+
+/* Music Player */
+.musicnav{
+    width:80%;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Bottom Navbar */
+.navlast{
+    width:80%;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Bigger Fonts */
+h2{
+    font-size:34px;
+}
+
+h3{
+    font-size:24px;
+}
+
+p{
+    font-size:18px;
+}
+
+button{
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+}
+     
+     
+     
+</style>
+  </head>
+  <body>
+     <div class="premium"> 
+    <div class="premium-header">
+    <i class="fa-solid fa-crown"></i>
+   <h3>Spotify Premium</h3>
+    <br>
+      </div>
+    <div class="settingIcon" onclick="window.location.href='notworking.html'">
+      <i class="fa-solid fa-gear"></i>    
+    </div>
+  </div>
+    
+    <div class="headerP">
+      <p>Enjoy add-free music and offline listening</p> 
+      </div>
+      
+  <div class="header">
+  <div class="text-box">
+   <div class="textH1">
+     <h2>Premium Individual</h2>
+     </div>
+    <div class="textH2">
+     <h3>₹119/month</h3> 
+    </div>
+     <div class="firstMonthFree">
+       <button type="button">
+         <p>first month free</p>
+       </button>
+    </div>
+       <div class="GetPremium">
+       <button type="button">
+         <p>Get Premium</p>
+       </button>
+     </div>
+     </div>
+     
+     <div class="premium-logo">
+       <i class="fa-solid fa-crown"></i>
+     </div>
+  </div>
+    
+    <div class="premiumBenifits-conrainer">
+      <h3>Premium Benifits</h3>
+      <div class="premiumBenifits-card">
+       <div class="fontIcon" onclick="window.location.href='notworking.html'">
+   <i class="fa-solid fa-ban"></i>
+       </div> 
+       <div class="premiumBenifits-text">
+      <p>Add-free music</p>
+       </div>
+       </div>
+       
+        <div class="premiumBenifits-card">
+       <div class="fontIcon" onclick="window.location.href='notworking.html'">
+        <i class="fa-solid fa-download"></i>
+       </div> 
+       <div class="premiumBenifits-text">
+        <p>Download songs</p>
+       </div>
+       </div>
+       
+     <div class="premiumBenifits-card">
+       <div class="fontIcon" onclick="window.location.href='notworking.html'">
+      <i class="fa-solid fa-forward"></i>
+       </div> 
+       <div class="premiumBenifits-text">
+        <p>Unlimited skips</p>
+       </div>
+       </div>
+       
+     <div class="premiumBenifits-card">
+      
+       <div class="fontIcon" onclick="window.location.href='notworking.html'">
+        <i class="fa-solid fa-music"></i>
+       </div> 
+       <div class="premiumBenifits-text">
+        <p>High quality audio</p>
+       </div>
+       </div>
+       <div class="premiumBenifits-card">
+       <div class="fontIcon" onclick="window.location.href='notworking.html'">
+        <i class="fa-solid fa-headphones"></i>
+       </div> 
+       <div class="premiumBenifits-text">
+         <p>Offline listening</p>
+       </div>
+    </div>
+      </div>
+      
+      
+      
+      <div class="chooseYourPlan-conrainer">
+      <h3>Choose your plan</h3>
+      <div class="chooseYourPlan-card">
+       <div class="fontIcon" id="green" onclick="window.location.href='notworking.html'">
+   <i class="fa-solid fa-user"></i>   
+       </div> 
+       <div class="chooseYourPlan-text" id="greenText">
+         <h3>Individual</h3>
+      
+      <div id="payment">
+        <h3>₹119/month</h3>
+      </div>
+      <hr style="width:80%; margin:10px auto;">
+    <p> 1 Account</p>
+  <div id="greenButton">
+      <button>Choose Plan</button>
+    </div>
+       </div>
+       </div>
+       
+        <div class="chooseYourPlan-card">
+       <div class="fontIcon" id="blue" onclick="window.location.href='notworking.html'">
+    <i class="fa-solid fa-user-group"></i>
+       </div> 
+       <div class="chooseYourPlan-text" id="blueText">
+         <h3>Duo</h3>
+         
+         <div id="payment">
+        <h3>₹149/month</h3>
+      </div>
+    <hr style="width:80%; margin:10px auto;">
+    <p> 4 Account</p>
+<div id="blueButton">
+      <button>Choose Plan</button>
+    </div>
+       </div>
+       </div>
+       
+     <div class="chooseYourPlan-card">
+       <div class="fontIcon" id="purple" onclick="window.location.href='notworking.html'">
+      <i class="fa-solid fa-users"></i>
+       </div> 
+       <div class="chooseYourPlan-text" id="purpleText">
+         <h3>family</h3>
+         
+         <div id="payment">
+        <h3>₹179/month</h3>
+      </div>
+    <hr style="width:80%; margin:10px auto;">
+    <p>8 Account</p>
+    <div id="purpleButton">
+      <button>Choose Plan</button>
+    </div>
+       </div>
+       </div>
+     </div>
+      
+      
+       <div class="whyPremium-conrainer">
+      <h3> Why Premium?</h3>
+      <div class="whyPremium-card">
+       <div class="whyIcon" onclick="window.location.href='notworking.html'">
+   <i class="fa-solid fa-ban"></i>
+       </div> 
+       <div class="premiumBenifits-text">
+         <h3>No-Ads</h3>
+         <p>Enjoy music without interruptions.</p>
+       </div>
+       </div>
+       
+        <div class="whyPremium-card">
+       <div class="whyIcon" onclick="window.location.href='notworking.html'">
+        <i class="fa-solid fa-download"></i>
+       </div> 
+       <div class="premiumBenifits-text">
+         <h3>Offline Download</h3>
+         <p>  Listen anywhere, anytime</p>
+       </div>
+       </div>
+       
+     <div class="whyPremium-card">
+       <div class="whyIcon" onclick="window.location.href='notworking.html'">
+      <i class="fa-solid fa-forward"></i>
+       </div> 
+       <div class="whyPremium-text">
+        <h3>Unlimited skips</h3>
+        <p>Play the songs you love.</p>
+       </div>
+       </div>
+       
+     
+       <div class="whyPremium-card">
+       <div class="whyIcon" onclick="window.location.href='notworking.html'">
+    <i class="fa-solid fa-volume-high"></i>
+       </div> 
+       <div class="whyPremium-text">
+      <h3>Better Audio</h3>
+      <p>High quality sound experience.</p>
+       </div>
+    </div>
+    
+           <div class="whyPremium-card">
+       <div class="whyIcon" onclick="window.location.href='notworking.html'">
+  <i class="fa-solid fa-headphones"></i>
+       </div> 
+       <div class="whyPremium-text">
+         <h3>Offline listening</h3>
+         <p>Listen to your favourite songs without internet.</p>
+       </div>
+    </div>
+      </div>
+      
+      
+   <div class="frequentQuestions-container">
+      
+       <h3> Frequently Asked Questions </h3>
+     <div class="frequent-card">
+
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    <p>What is Spotify Premium?</p>
+    <i class="fa-solid fa-plus"></i>
+  </div>
+
+  <div class="faq-answer">
+    Spotify Premium lets you enjoy ad-free music, offline downloads, unlimited skips, and high-quality audio.
+  </div>
+</div>
+       
+    <div class="frequent-card">
+
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    <p>How do I cancel Premium?</p>
+    <i class="fa-solid fa-plus"></i>
+  </div>
+
+  <div class="faq-answer">
+   You can cancel your Premium subscription anytime from your account settings. Your Premium benefits will continue until the end of your current billing period.
+  </div>
+
+</div>
+       
+    
+     <div class="frequent-card">
+
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    <p>Can I download songs with premium?</p>
+    <i class="fa-solid fa-plus"></i>
+  </div>
+
+  <div class="faq-answer">
+    Yes. Premium members can download songs, albums, and playlists to listen offline without an internet connection.
+  </div>
+</div>
+       
+  <div class="frequent-card">
+
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    <p>Can I share my Premium plan?</p>
+    <i class="fa-solid fa-plus"></i>
+  </div>
+
+  <div class="faq-answer">
+   Yes. Duo and Family plans allow multiple people to enjoy Premium on separate accounts, according to the plan's eligibility rules. 
+  </div>
+</div>
+<div class="frequent-card">
+
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    <p>Is there a free trial?</p>
+    <i class="fa-solid fa-plus"></i>
+  </div>
+
+  <div class="faq-answer">
+  Spotify may offer a free trial for eligible new users. Availability depends on your country and current promotions.
+  </div>
+</div>
+
+  </div>
+      
+      
+      <div class="lastPremium">
+        <div class="lastPpremium-heading">
+  <h2>Ready to experience music without limits?</h2> 
+        </div>
+        
+        <div class="flexPremium">
+          <div class="joinpremium">
+            <p>Join premium today and enjoy the best of Spotify.</p>
+          </div>
+          
+  <div  id="last-premium">
+    <button type="button" onclick="window.location.href='notworking.html'"><p>Get Premium</p></button>
+      </div>
+        </div>
+      </div>
+      
+      
+      <div class="musicnav">
+      
+      <div class="intro">
+        <div class="introimage">
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-pHM8QVe4td6Cmt2X13wQWzCl945iqnF4WbvPH5fFVOXicmXEkUV7AUJel5Hb">
+        </div>
+        <div class="songName">
+          <p>Apna Bana Le, Arijit Singh</p>
+        </div>
+       </div> 
+       <br>
+        <div class="controls">
+          <input type="range">
+          <br>
+    <div class="buttons">
+   <button>⏮</button>
+   <button>▶️</button>
+   <button>⏭</button>
+   </div>
+        </div>
+
+    </div>
+    
+    <div class="navlast">
+      <div class="navlast-icons">
+      <div class="home">
+        <a href="#home">
+        <i class="fa-solid fa-house"></i>
+        </a>
+    <span>Home</span>
+      </div>
+      
+      <div class="search">
+        <a href="search.html">
+         <i class="fa-solid fa-magnifying-glass">
+           
+         </i>
+         </a>
+    <span>Search</span>
+      </div>
+      
+      <div class="library">
+        <a href="library.html">
+        <i class="fa-solid fa-book"></i>
+        </a>
+    <span>Library</span>
+      </div>
+      
+     <div class="premium">
+       <a href="premium.html">
+       <i class="fa-solid fa-crown"></i>
+       </a>
+    <span>Premium</span>
+     </div>
+     </div>
+    </div>
+      
+  
+  <script>
+function toggleFAQ(element){
+
+    let card = element.parentElement;
+
+    card.classList.toggle("active");
+
+}
+</script>
+  
+  
+  </body>
+  
+</html>
